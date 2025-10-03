@@ -1,140 +1,159 @@
-/* reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #fff;
-}
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  .cajheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    color: #fff;
+    padding: 15px 40px;
+  }
+  .logmusica {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .logmusica img {
+    width: 100px;
+  }
+  .icono-buscar img {
+    width: 22px;
+    cursor: pointer;
+  }
+  
+  .encamusica {
+    position: relative;
+    background: url("images/background.png") no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 60px;
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+  }
+  .encamusica::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+  }
+  .textenca {
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+  }
+  .textenca h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  .textenca p {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  .btn-naranja {
+    background: #ff6600;
+    padding: 12px 25px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  
+  .dance-tour {
+    background: #ff6600;
+    color: #fff;
+    text-align: center;
+    padding: 60px 40px;
+  }
+  .dance-tour h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  .cajtour {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+  }
+  .cajtour-item {
+    background: #333;
+    width: 250px;
+    border-radius: 6px;
+    overflow: hidden;
+    text-align: center;
+  }
+  .cajtour-item img {
+    width: 100%;
+    display: block;
+  }
+  .cajtour-item h3 {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  .cajtour-item p {
+    font-size: 14px;
+    padding: 10px;
+  }
 
-/* header */
-.caja-header {
-  background: #222;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px 40px;
-}
-.logo-musica {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: bold;
-}
-.logo-musica img {
-  width: 100px;
-}
-.buscador img {
-  width: 20px;
-}
+  .precimusica {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 70px 40px;
+  }
+  .precimusica h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  .cajprecios {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+  }
+  .cajprecio-item {
+    background: #ff6600;
+    padding: 30px;
+    border-radius: 6px;
+    width: 250px;
+    text-align: center;
+  }
+  .cajprecio-item img {
+    width: 60px;
+    margin-bottom: 15px;
+  }
+  .cajprecio-item h3 {
+    margin-bottom: 10px;
+  }
+  .cajprecio-item p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .precio {
+    display: block;
+    background: #111;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
 
-/* hero */
-.hero-musica {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #000;
-  padding: 60px 50px;
-}
-.texto-hero {
-  flex: 1;
-}
-.texto-hero h1 {
-  font-size: 40px;
-  margin-bottom: 15px;
-}
-.texto-hero p {
-  margin-bottom: 20px;
-}
-.btn-naranja {
-  background: #ff5a00;
-  padding: 10px 20px;
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-}
-.foto-hero {
-  flex: 1;
-  text-align: right;
-}
-.foto-hero img {
-  max-width: 100%;
-}
-
-/* tour */
-.tour {
-  background: #ff5a00;
-  text-align: center;
-  padding: 60px 40px;
-}
-.tour h2 {
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-.cajas-tour {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 30px;
-}
-.caja-tour {
-  background: #333;
-  padding: 1px;
-  max-width: 250px;
-}
-.caja-tour img {
-  width: 100%;
-  margin-bottom: 10px;
-}
-.caja-tour h3 {
-  margin-bottom: 10px;
-}
-
-/* precios */
-.precios {
-  background: #222;
-  text-align: center;
-  padding: 60px 40px;
-}
-.precios h2 {
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-.cajas-precios {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 30px;
-}
-.caja-precio {
-  background: #ff5a00;
-  color: #fff;
-  padding: 20px;
-  border-radius: 6px;
-  max-width: 250px;
-}
-.caja-precio img {
-  width: 50px;
-  margin-bottom: 15px;
-}
-.caja-precio h3 {
-  margin-bottom: 10px;
-}
-.caja-precio .precio {
-  display: block;
-  margin-top: 15px;
-  background: #313131;
-  padding: 8px;
-  font-weight: bold;
-}
-
-/* footer */
-.pie {
-  background: #ff5a00;
-  text-align: center;
-  padding: 15px;
-  font-size: 14px;
-}
+  .cajfooter {
+    background: #ff6600;
+    text-align: center;
+    color: #fff;
+    padding: 15px;
+  }
+  
